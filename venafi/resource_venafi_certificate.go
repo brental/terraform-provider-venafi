@@ -900,6 +900,8 @@ func resourceVenafiCertificateImport(ctx context.Context, d *schema.ResourceData
 		return nil, err
 	}
 
+	d.SetId(pickupID)
+
 	return []*schema.ResourceData{d}, nil
 }
 
